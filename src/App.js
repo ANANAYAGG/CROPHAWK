@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
+import'leaflet/dist/leaflet.css'
+import OrderCart from './components/OrderCartComponent/OrderCart.js';
+import MainSettingsPage from './components/settings/mainSettings';
+import LeafletMap from './components/MainModal/maping';
+import React from 'react';
+import {Route,Routes} from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  
+   <div style={{height:'100vh',width:'100vw',position:'relative' }}>
+   <div style={{height:'100%',width:'100%'}}>
+  
+  <Routes>
+   <Route  path='/' element={<LeafletMap/>}/>
+   <Route  path='/OrderCart' element={<OrderCart/>}/>
+   <Route  path='/Settings' element={<MainSettingsPage/>}/>
+  </Routes>    
+   
+   </div>
+   
+
+ </div>
   );
 }
 

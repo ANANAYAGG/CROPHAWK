@@ -27,6 +27,15 @@
 .App-link {
   color: #61dafb;
 }
+.leaflet-container {
+  height: 600px;
+  width: 100%;
+}
+
+.leaflet-div-icon {
+  background: transparent;
+  border: none;
+}
 
 @keyframes App-logo-spin {
   from {
